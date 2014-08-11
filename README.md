@@ -120,17 +120,53 @@ Please see the condition types section for a full list of the available conditio
 ```
 
 ## Button Tag
+Almost all scenes should have at least ONE button added to it, otherwise you can have your player get stuck at a scene and never progress. A "button" tag has a "text" attribute which is used to display the text on the button or what you want displayed on the button. The "titleKey" is an important attribute used to point or find the scene you wish to progress too. The "action" attribute is a bit complex in that it makes the button acts like a condition tag in that if it's successful you do what's in the "result" attribute. A button "visible" attribute should be set to true by default and be hidden by the condition if the button has one. Otherwise you can hide a button by setting it to false if you wish to hide the button during game play.
+
+### Example
+```
+<data>
+	<scene title="start">
+		<dialogue>This the start scene</dialogue>
+		<button text="I am a button" titleKey="button1" action="" result="" visible="true">
+	</scene>
+	
+	<scene title="button1">
+		<dialogue>Button has been pressed</dialogue>
+		<button text="Use Red Key" titleKey="start" action="useItem:redkey" result="button2" visible="true">
+		</button>
+	</scene>
+	
+	<scene title="button2">
+		<dialogue>You had a key to get here!</dialogue>
+		<button text="Back to start" titleKey="start" action="" result="" visible="true">
+		</button>
+	</scene>
+</data>
+```
+
+The types of button actions usable are:
+
+**useItem**: Like the condition type it checks if the player has a the item in there innovatory for everything after the colon (:).
+
+### Example
+```
+<button text="Use test" titleKey="start" action="useItem:test" result="actiontitle" visible="true">
+```
 
 ## Condition Types
 The types of conditions will dictate what "extra" information must be present in the condition tag. The types listed are as follows:
-*hasItem*: Checks to see if a itemType specified is in the players inventory based on the item's key. The key used is the same one in the item tags.
+
+**hasItem**: Checks to see if a itemType specified is in the players inventory based on the item's key. The key used is the same one in the item tags.
 ### Example
 ```
 <condition type="hasItem" **itemType**="itemKey" met="false">
 ```
-*useItem*: ~*To be developed*~
-*hasStatType*: ~*To be developed*~
-*useEndurence*: ~*To be developed*~
+
+**useItem**: ~*To be developed*~
+
+**hasStatType**: ~*To be developed*~
+
+**useEndurence**: ~*To be developed*~
 
 # StoryItems XML API
 Much more straight forward then the story XML in the sense that it follows set number of properties. These properties are what define what the item is and how it will relate to the conditions or game elements.
