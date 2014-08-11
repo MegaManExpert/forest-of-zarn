@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<data>
+  <scene title="start">
+    <dialogue>Use the buttons below to move and interact with in the "Forest of Zarn".
+    
+    ~.:CHANGE LOG:.
+       @condition0
+    ~.:PLANED FEATURES:.~
+       @condition1
+       @condition2</dialogue>
+    <condition type="hasItem" itemType="test" met="false">
+        <fail>* Release of "Forest of Zarn" Alpha</fail>
+        <success></success>
+    </condition>
+	<condition type="hasItem" itemType="test" met="false">
+		<fail>* Add more condition checks to the game</fail>
+		<success></success>
+	</condition>
+	<condition type="hasItem" itemType="test" met="false">
+		<fail>* Add combat of foes with xml sheet</fail>
+		<success></success>
+	</condition>
+    <button text="Begin" titleKey="clearing" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="clearing">
+    <dialogue>As you become more aware of your surroundings, you start to wonder how you got here and where you are. You notice to the west some cliffs past all the foliage, to the north you see more forest and what looks like a man-made structure, to the east you see more forest, and to the south is small game trail heading deeper into the woods.</dialogue>
+    <button text="North" titleKey="well" action="" result="" visible="true"/>
+    <button text="East" titleKey="thickforest1" action="" result="" visible="true"/>
+    <button text="South" titleKey="gametrail" action="" result="" visible="true"/>
+    <button text="West" titleKey="cliffs1" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="well">
+    <dialogue>You notice that the man-made structure is a old well that has a rusty chain attached to it. To the north you see a small path leading from the well to what looks like a small cabin. To the south and east you see more forest. To the west you see a part of woods that seems to be darker with bits of flashing motes of light.</dialogue>
+    <button text="North" titleKey="cabin" action="" result="" visible="true"/>
+    <button text="East" titleKey="thickforest3" action="" result="" visible="true"/>
+    <button text="South" titleKey="clearing" action="" result="" visible="true"/>
+    <button text="West" titleKey="mysticforest" action="" result="" visible="true"/>
+    <button text="Climb chain" titleKey="wellinside" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="thickforest1">
+    <dialogue>This part of the forest seems a lot thicker then the rest, the only ways you can go are to the west and south.</dialogue>
+    <button text="South" titleKey="thickforest2" action="" result="" visible="true"/>
+    <button text="West" titleKey="clearing" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="thickforest2">
+    <dialogue>The forest here is wildly confusing, you are now hopelessly lost. As you try and figure out which way to go you hear the howling of wolves not to far away.</dialogue>
+    <button text="North" titleKey="thickforest1" action="" result="" visible="true"/>
+    <button text="East" titleKey="lost" action="" result="" visible="true"/>
+    <button text="South" titleKey="lost" action="" result="" visible="true"/>
+    <button text="West" titleKey="gametrail" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="lost">
+    <dialogue>You spend an hour or so in the thick underbrush.</dialogue>
+    <button text="North" titleKey="gametrail" action="" result="" visible="true"/>
+    <button text="East" titleKey="clearing" action="" result="" visible="true"/>
+    <button text="South" titleKey="thickforest2" action="" result="" visible="true"/>
+    <button text="West" titleKey="mysticforest" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="gametrail">
+    <dialogue>This section of the forest has a game trail that slowly fades to the east. The only other available direction is northword back to the forest clearing.</dialogue>
+    <button text="North" titleKey="clearing" action="" result="" visible="true"/>
+    <button text="East" titleKey="thickforest2" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="wellinside">
+    <dialogue>You are now swimming in a underground stream taking you deeper underground. You can see a chain and light coming from up-steam.</dialogue>
+    <button text="Swim Deeper" titleKey="cave" action="" result="" visible="true"/>
+    <button text="Climb Chain" titleKey="well" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="mysticforest">
+    <dialogue>As you step into this part of the woods everything goes quite and the woods dim to almost a deep dark purple color. Then you hear faint chimes playing soothing melody and motes of light in different colors starts to dance around you in the woods. You can see some torches near by and a small man-made structure.</dialogue>
+    <button text="Torches" titleKey="cave" action="" result="" visible="true"/>
+    <button text="Structure" titleKey="well" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="cliffs1">
+    <dialogue>The cliffs to your west are too difficult to scale or climb and the south is blocked by a land slide. You can follow the cliff northword or go back into the forest.</dialogue>
+    <button text="North" titleKey="cave" action="" result="" visible="true"/>
+    <button text="Enter forest" titleKey="clearing" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="thickforest3">
+    <dialogue>As you pass thought the forest you can hear the sound of water crashing on a shore of some kind, also the forest thins out to the easte. The north and south is blocked by huge bushes with wicked looking thorns.</dialogue>
+    <button text="East" titleKey="beach" action="" result="" visible="true"/>
+    <button text="West" titleKey="well" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="beach">
+    <dialogue>You find your-self on a sandy beach over looking a large lake. The water is calm and crystal clear and you can see far to the other side. You could try to swim across the lake or go back the way you came.</dialogue>
+    <button text="Swim" titleKey="lake" action="" result="" visible="true"/>
+    <button text="Head back" titleKey="thickforest3" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="lake">
+    <dialogue>As you swim across the lake you can feel the water getting colder. When you are about half way across the lake you limbs start to go numb and tired. You give into the cold and exhaustion and slowly sink deeper into the depths of the lake.</dialogue>
+    <button text="Restart" titleKey="start" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="cave">
+    <dialogue>The cliffs here are made of smooth limestone that is dotted with small holes where water has formed pockets. Along the cliff face is a small cave with two torches in front of it. The cave has a underground lake filled from a underground stream. The forest to your right seems to have mysterious lights coming from it. The cliffs contune north and south of you.</dialogue>
+    <button text="Head north" titleKey="cliffs2" action="" result="" visible="true"/>
+    <button text="Head south" titleKey="cliffs1" action="" result="" visible="true"/>
+    <button text="Enter forest" titleKey="mysticforest" action="" result="" visible="true"/>
+    <button text="Swim" titleKey="wellinside" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="cliffs2">
+    <dialogue>The cliff face here is as smooth as polished marble. To the east is the forest but down a cliff thats too steep. You think you can make out a cabin from atop of the cliff.</dialogue>
+    <button text="North" titleKey="cliffs3" action="" result="" visible="true"/>
+    <button text="South" titleKey="cave" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="cliffs3">
+    <dialogue>The cliff face here is as smooth as polished marble. To the east is the forest but down a cliff thats too steep. You think you can make out a cabin from atop of the cliff.</dialogue>
+    <button text="North" titleKey="cliffs4" action="" result="" visible="true"/>
+    <button text="South" titleKey="cave" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="cliffs4">
+    <dialogue>The cliffs here give way to forest and to the north is a land slide of rocks and wood that happen recently.</dialogue>
+    <button text="South" titleKey="cliffs3" action="" result="" visible="true"/>
+    <button text="Enter forest" titleKey="thickforest4" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="thickforest4">
+    <dialogue>The forest is lively and green but to your north you see an impassable bog. You can make out a cliff face to the west and to the east you can see a dark wood with lots of dead trees.</dialogue>
+    <button text="West" titleKey="cliffs3" action="" result="" visible="true"/>
+    <button text="Dark forest" titleKey="darkwoods" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="darkwoods">
+    <dialogue>These woods have a thick fog covering the ground making very hard to walk without tripping. To the north and east is a bunch of thorn bushes with what looks like sickly green venom dripping off the thorns. The forest gets more greener to the west and you can make out a small building to the southbound.</dialogue>
+    <button text="West" titleKey="thickforest4" action="" result="" visible="true"/>
+    <button text="South" titleKey="cabin" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="cabin">
+    <dialogue>You stand in a small clearing with what looks like a small cabin. The cabin looks like it has not been used recently nor maintained by any person. Rust is on all the metal surfaces as well as some rot on the wood planks. To the north of the cabin is a forbidding forest and to the south is small structure made of stone.</dialogue>
+    <button text="North" titleKey="darkwoods" action="" result="" visible="true"/>
+    <button text="South" titleKey="well" action="" result="" visible="true"/>
+    <button text="Inside" titleKey="insidecabin" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="insidecabin">
+    <dialogue>The inside is even in worse shape then the outside. A cold stone fireplace in on the east side of the cabin and a mouldy bed in one of the corners of the room. There is bookshelf with one book on it and small chest at the foot of the bed.</dialogue>
+    <button text="Leave" titleKey="cabin" action="" result="" visible="true"/>
+    <button text="Book" titleKey="book" action="" result="" visible="true"/>
+    <button text="Bed" titleKey="bed" action="" result="" visible="true"/>
+    <button text="Fireplace" titleKey="fireplace" action="" result="" visible="true"/>
+    <button text="Open chest" titleKey="chest" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="bed">
+    <dialogue>You go up to the bed and notice its to rotten to sleep on.</dialogue>
+    <button text="Look" titleKey="insidecabin" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="fireplace">
+    <dialogue>You go up to the fireplace and find nothing of interest.</dialogue>
+    <button text="Look" titleKey="insidecabin" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="book">
+    <dialogue>You look over the book and find that out of all the objects in the cabin it's the least worn and rotted object. On the cover it says "Home again: A tails end", the pages are all blank and yellowed with age except for the last page. The last page has image of your home that seems to be almost alive and real. What would you do? "Touch the image" or "Close the book"?</dialogue>
+    <button text="Touch" titleKey="booktouched" action="" result="" visible="true"/>
+    <button text="Close" titleKey="insidecabin" action="" result="" visible="true"/>
+  </scene>
+  
+   <scene title="chest">
+    <dialogue>The chest is firmly locked with a rusted pad lock, You can easily break the lock but you can also easily leave the chest alone. Would you "Break the lock" or "Leave the chest alone"? What would you do? "Touch the image" or "Close the book"?</dialogue>
+    <button text="Leave Alone" titleKey="insidecabin" action="" result="" visible="true"/>
+    <button text="Break Open" titleKey="chestbreak" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="chestbreak">
+    <dialogue>You break the lock and open the chest. As you lift the lid off the chest you hear a soft mechanical click and loud bang with lots of fire. It seems you set off a trap and now you paid your curiosity with your life.</dialogue>
+    <button text="Restart" titleKey="start" action="" result="" visible="true"/>
+  </scene>
+  
+  <scene title="booktouched">
+    <dialogue>You find your self back at home and in your bed. Was this a dream or real place you visited? You can still smell the crushed pine and forest as you lay awake. Congrats! you have beaten the Forest of Zarn!</dialogue>
+    <button text="Restart" titleKey="start" action="" result="" visible="true"/>
+  </scene>
+</data>

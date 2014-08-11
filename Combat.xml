@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+		<button name="Human and HP > 9" action="Failure!" btnIndex="5"/>
+			<req pramType="Race" pramSign="=" pramReq=0 btnIndex="-1">Success for AND!</req>
+			<req pramType="HP" pramSign=">" pramReq=9 btnIndex="-1"></req>
+		<button name="Human or VIT > 9" action="Failure!" btnIndex="5"/>
+			<req pramType="Race" pramSign="=" pramReq=0 btnIndex="-2">Success for OR!</req>
+			<req pramType="VIT" pramSign=">" pramReq=9 btnIndex="-2">Success for OR!</req>
+
