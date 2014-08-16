@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<data>
+  <window scene="start">
+    <dialog>You are trapped in a room with 4 doors and table with stuff on it.</dialog>
+    <button text="North Door" winScene="northdoor" action="" result="" visible="true"/>
+    <button text="East Door" winScene="eastdoor" action="" result="" visible="true"/>
+    <button text="South Door" winScene="southdoor" action="" result="" visible="true"/>
+    <button text="West Door" winScene="westdoor" action="" result="" visible="true"/>
+    <button text="Table" winScene="table" action="" result="" visible="true"/>
+  </window>
+  
+  <window scene="northdoor">
+    <dialog>This is a red door</dialog>
+    <button text="Use Red Key" winScene="northdoor" action="useItem:redkey" result="redroom" visible="true">
+      <condition type="hasItem" itemType="redkey" met="false">
+        <fail> and it is locked. Maybe if you had a key matching the door color.</fail>
+        <success> and you happen to have the means to open the door.</success>
+      </condition>
+    </button>
+    <button text="Examin Room" winScene="start" action="" result="" visible="true"/>
+  </window>
+  
+  <window scene="eastdoor">
+    <dialog>This is a blue door that needs @condition0 @condition1</dialog>
+    <condition type="hasItem" itemType="bluedust" met="false">
+        <fail>some blue dust</fail>
+        <success>blue dust which you have</success>
+    </condition>
+    <condition type="hasItem" itemType="redkey" met="false">
+        <fail>and a key of some sort.</fail>
+        <success>added to your Red Key.</success>
+    </condition>
+    <button text="Examin Room" winScene="start" action="" result="" visible="true"/>
+  </window>
+  
+  <window scene="southdoor">
+    <dialog>This is a yellow door</dialog>
+    <button text="Examin Room" winScene="start" action="" result="" visible="true"/>
+  </window>
+  
+  <window scene="westdoor">
+    <dialog>This is a green door</dialog>
+    <button text="Examin Room" winScene="start" action="" result="" visible="true"/>
+  </window>
+  
+  <window scene="table">
+    <dialog>The table has a few items on it: @items</dialog>
+    <item itemKey="redkey"/>
+    <item itemKey="bluedust"/>
+    <item itemKey="greenlamp"/>
+    <item itemKey="yellowfan"/>
+    
+    <button text="Red Key" winScene="table" action="getItem:redkey" result="" visible="true"/>
+    <button text="Blue Dust" winScene="table" action="getItem:bluedust" result="" visible="true"/>
+    <button text="Green Lamp" winScene="table" action="getItem:greenlamp" result="" visible="true"/>
+    <button text="Yellow Fan" winScene="table" action="getItem:yellowfan" result="" visible="true"/>
+    <button text="Examin Room" winScene="start" action="" result="" visible="true"/>
+  </window>
+  
+  <window scene="redroom">
+    <dialog>This room is filled with red light: @item0</dialog>
+    <item itemKey="bluedust"/>
+    <button text="Leave" winScene="northdoor" action="" result="" visible="true"/>
+  </window>
+</data>

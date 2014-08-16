@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <item>
+    <key>test</key>
+    <name>Test Item</name>
+    <discription>A test item from StoryItem.xml</discription>
+    <type>Useable</type>
+    <equipment>head</equipment>
+    <uses>1</uses>
+  </item>
+  
+  <item>
+    <key>redkey</key>
+    <name>Red Key</name>
+    <discription>An old fasioned key thats painted red</discription>
+    <type>key</type>
+    <equipment></equipment>
+    <uses>1</uses>
+  </item>
+  
+  <item>
+    <key>bluedust</key>
+    <name>Blue Dust</name>
+    <discription>A powder that sparkles blue in the light</discription>
+    <type>Useable</type>
+    <equipment></equipment>
+    <uses>1</uses>
+  </item>
+  
+  <item>
+    <key>greenlamp</key>
+    <name>Green Lamp</name>
+    <discription>A small brass oil lamp that is green from age</discription>
+    <type>Useable</type>
+    <equipment>hand</equipment>
+    <uses>5</uses>
+  </item>
+  
+  <item>
+    <key>yellowfan</key>
+    <name>Yellow Fan</name>
+    <discription>A very well made fan, thats made with a fancy yellow silk</discription>
+    <type>Useable</type>
+    <equipment>hand</equipment>
+    <uses>1</uses>
+  </item> 
+</data>

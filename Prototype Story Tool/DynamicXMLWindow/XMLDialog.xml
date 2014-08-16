@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <window>
+    <dialog>I am window 0!</dialog>
+    <button text="1" winIndex="1" action="" result=""/>
+    <button text="2" winIndex="2" action="" result=""/>
+    <button text="3" winIndex="3" action="" result=""/>
+    <button text="4" winIndex="4" action="" result=""/>
+    <button text="6" winIndex="6" action="" result=""/>
+  </window>
+
+  <window>
+    <dialog>I am window 1!</dialog>
+    <button text="Back to 0" winIndex="0" action="" result=""/>
+    <button text="Go to 2" winIndex="2" action="" result=""/>
+  </window>
+  
+  <window>
+    <dialog>I am window 2!</dialog>
+    <button text="Back to 0" winIndex="0" action="" result=""/>
+    <button text="Go to 3" winIndex="3" action="" result=""/>
+  </window>
+  
+  <window>
+    <dialog>I am window 3!</dialog>
+    <button text="Back to 0" winIndex="0" action="" result=""/>
+    <button text="Go to 4" winIndex="4" action="" result=""/>
+  </window>
+
+  <window>
+    <dialog>I am window 4!</dialog>
+    <button text="Back to 0" winIndex="0" action="" result=""/>
+    <button text="Go to 5" winIndex="5" action="" result=""/>
+  </window>
+  
+  <window>
+    <dialog>I am window 5!
+            mpgg1e3ve2ivchc006fh
+            bdsevoirjhh5tt3sql5o
+            fllmhlnnz1o17m4cps0z
+            npj9p913i3flqj7p1263
+            3axrr1cpl8e3n7yvihvs
+            b5twd9b1ue5thquglkb8
+            y4tw4v9j12o9su9ota00
+            8w0zc4xqn0nfa1wmoknq
+            q5hk5bnu5p81ur4qmuzr
+            vf7l58aorqkmojts30dy
+            cgt2v4x1u86i2qkthg3t
+            0orjejosyivajogkez5h
+            gfay7r6fe9sgvbgrs1yb
+            38112finmc3zdxe9ug8r
+            7kgyuff4ctwh4aefjb7x
+            u9ceblo9ij30vh27uotc
+            9wbfec9fncddfm8elsqa
+            t3vwkstch64cyc4nl3fy
+            onu5ne3g2upaoxw001hg
+            bnf3xrcf1jb1u9wdxybs
+            svl4qmyntw6et9pes97z
+            jycbqjjk2g7q7v186u65
+            9ribhjlbrqtw3p1ugdyd
+            rz0hmnuima226lz8lvnu
+            2i7l8gyfnu055ujfspvk
+            xnij1dooromfm2j6jk2n
+            uc8y8782eyxr3ho0m9pi
+            7j76uxwdos2vftvrnhgy
+            1tnsclty4msncywkkzsp
+            jtuxtdeltzshi5xim77h
+            bqwf3sq13okcda8s1rg8
+            egj313a8ljurozke9m0c
+            3t9gtx37rrs1guj7hgbp
+            i0esazt9b99e3jcrrk0p
+            zg4n8hb4g6n355q0bmg6
+            vzccm3cyi3r5p5tgfpul
+            acb33aycgr6cn8m4ypbv
+            0txiceh2mp2aypc4lh1v
+            y42mgf4wciclyabcfc0j
+            sznaakbgvqv3be410jpi
+            hfv8o8istirsgsoy56db
+            48kmpc8t8r4ca8ybbqlk
+            rbx3a0gqgcof96wim4vc
+            qmdgfzqb9o9syr0e4g31
+            46n1xiz244gvx082g6q2
+            odorvehqojob8jedyoac
+            32aj0q8x767hdzks0vkq
+            adf3b8habmnqwaqw0mh9
+            yigx7yi2896z1wvjqbag
+            w4pvg62ibd1k8me5tivc
+    </dialog>
+    <button text="Back to 0" winIndex="0" action="" result=""/>
+    <button text="Go to 2" winIndex="2" action="" result=""/>
+    <button text="Go to 3" winIndex="3" action="" result=""/>
+  </window>
+
+  <window>
+    <dialog>I am window 6!</dialog>
+    <condition type="itemEquip" itemType="Fan">
+      <message> You have failed.</message>
+    </condition>
+    <button text="Use Fan" winIndex="0" action="" result="">
+      <condition type="itemEquip" itemType="Fan">
+        <message></message>
+      </condition>
+    </button>
+    <button text="Get Fan" winIndex="6" action="getItem" result="Fan">
+      <condition type="itemEquip" itemType="Light">
+        <message> and do not have enough light to see it well.</message>
+      </condition>
+    </button>
+    <button text="Get Light" winIndex="0" action="getItem" result="Light">
+      <condition type="useOnce">
+        <message></message>
+      </condition>
+    </button>
+  </window>
+</data>

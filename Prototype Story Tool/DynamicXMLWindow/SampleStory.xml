@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<data>
+  <window>
+    <dialog>You are trapped in a room with 4 doors and table with stuff on it.</dialog>
+    <button text="North Door" winIndex="2" action="" result=""/>
+    <button text="East Door" winIndex="3" action="" result=""/>
+    <button text="South Door" winIndex="4" action="" result=""/>
+    <button text="West Door" winIndex="5" action="" result=""/>
+    <button text="Table" winIndex="1" action="" result=""/>
+  </window>
+
+  <window>
+    <dialog>The table has a few items on it: </dialog>
+    <condition type="itemEquipHide" itemType="Key">
+      <message> A red key</message>
+    </condition>
+    <condition type="itemEquipHide" itemType="Dust">
+      <message> Some blue dust</message>
+    </condition>
+    <condition type="itemEquipHide" itemType="Light">
+      <message> A green flashlight</message>
+    </condition>
+    <condition type="itemEquipHide" itemType="Fan">
+      <message> A yellow fan</message>
+    </condition>
+    <button text="Red Key" winIndex="1" action="getItem" result="Key">
+      <condition type="useOnce">
+        <message> You took the key</message>
+      </condition>
+      <condition type="useOnce">
+        <message> You took the key</message>
+      </condition>
+    </button>
+    <button text="Blue Dust" winIndex="1" action="getItem" result="Dust">
+      <condition type="useOnce">
+        <message> You took the dust</message>
+      </condition>
+    </button>
+    <button text="Green Flashlight" winIndex="1" action="getItem" result="Light">
+      <condition type="useOnce">
+        <message> You took the light</message>
+      </condition>
+    </button>
+    <button text="Yellow Fan" winIndex="1" action="getItem" result="Fan">
+      <condition type="useOnce">
+        <message> You took the fan</message>
+      </condition>
+    </button>
+    <button text="Examin Room" winIndex="0" action="" result=""/>
+  </window>
+  
+  <window>
+    <dialog>This is a red door</dialog>
+    <condition type="itemEquip" itemType="Key">
+      <message> and it is locked.</message>
+    </condition>
+    <button text="Use Red Key" winIndex="2" action="" result="">
+      <condition type="itemEquip" itemType="Key">
+        <message> Maybe if you had a key that matched the door you could unlock it.</message>
+      </condition>
+      <condition type="useOnce">
+        <message></message>
+      </condition>
+    </button>
+    <button text="Examin Room" winIndex="0" action="" result=""/>
+  </window>
+  
+  <window>
+    <dialog>This is a blue door.</dialog>
+    <button text="Examin Room" winIndex="0" action="" result=""/>
+  </window>
+
+  <window>
+    <dialog>This is a yellow door</dialog>
+    <button text="Examin Room" winIndex="0" action="" result=""/>
+  </window>
+  
+  <window>
+    <dialog>This is a green door</dialog>
+    <button text="Examin Room" winIndex="0" action="" result=""/>
+  </window>
+
+  <window>
+    <dialog>I am window 6!</dialog>
+    <condition type="itemEquip" itemType="Fan">
+      <message> You have failed.</message>
+    </condition>
+    <button text="Use Fan" winIndex="0" action="" result="">
+      <condition type="itemEquip" itemType="Fan">
+        <message></message>
+      </condition>
+    </button>
+    <button text="Get Fan" winIndex="6" action="getItem" result="Fan">
+      <condition type="itemEquip" itemType="Light">
+        <message> and do not have enough light to see it well.</message>
+      </condition>
+    </button>
+    <button text="Get Light" winIndex="0" action="getItem" result="Light">
+      <condition type="itemEquipHide" itemType="Light">
+        <message></message>
+      </condition>
+    </button>
+  </window>
+</data>
