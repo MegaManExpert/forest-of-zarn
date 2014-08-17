@@ -9,11 +9,12 @@ public class StoryWindow : MonoBehaviour
 {
 	Vector2 scrollPosition = Vector2.zero;
 	Vector2 scrollPosition1 = Vector2.zero;
-	
-	public TextAsset GameAsset;
+
+	public GUISkin StoneGuiSkin;
+	public static PlayerEntity playerStats;
+
 	static Hashtable storyMap = new Hashtable();
 	static Hashtable itemMap = new Hashtable();
-	public static PlayerEntity playerStats;
 	SceneEntity eScene = new SceneEntity();
 	ItemEntity eItem = new ItemEntity();
 
@@ -49,20 +50,22 @@ public class StoryWindow : MonoBehaviour
 	
 	void OnGUI()
 	{
-		GUI.Box(new Rect(133,45,Screen.width-170,Screen.height-135),"");
-		GUILayout.BeginArea(new Rect(135,50,Screen.width-155,Screen.height-145));
-	    scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(Screen.width-155), GUILayout.Height(Screen.height-145));
+		GUI.skin = StoneGuiSkin;
+
+		GUI.Box(new Rect(185,45,Screen.width-200,Screen.height-135),"");
+		GUILayout.BeginArea(new Rect(200,65,Screen.width-235,Screen.height-170));
+	    scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(Screen.width-240), GUILayout.Height(Screen.height-175));
 	    
 		GUILayout.Label(sDialogue);
 	    GUILayout.EndScrollView ();
 	    GUILayout.EndArea();
 		
-		GUI.BeginGroup (new Rect(10,40,115,Screen.height));
-		GUI.Box(new Rect(5,5,105,Screen.height-135), "Player Stats");
-		GUI.Label(new Rect (10,25,90,30), "Name: " + playerStats.getName());
-		GUI.Label(new Rect (10,40,90,30), "Race: " + playerStats.getRaceType());
-		GUI.Label(new Rect (10,55,90,30), "Hit Points: " + playerStats.getHitPoints());
-		GUI.Label(new Rect (10,70,90,30), "Endurence: " + playerStats.getEndurence());
+		GUI.BeginGroup (new Rect(10,40,175,Screen.height));
+		GUI.Box(new Rect(5,5,160,Screen.height-135), "Player Stats");
+		GUI.Label(new Rect (20,45,145,30), "Name: " + playerStats.getName());
+		GUI.Label(new Rect (20,60,145,30), "Race: " + playerStats.getRaceType());
+		GUI.Label(new Rect (20,75,145,30), "Hit Points: " + playerStats.getHitPoints());
+		GUI.Label(new Rect (20,90,145,30), "Endurence: " + playerStats.getEndurence());
 		GUI.EndGroup();
 		
 		GUI.BeginGroup (new Rect (20, 5, 540, 40));

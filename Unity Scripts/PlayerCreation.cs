@@ -60,7 +60,7 @@ public class PlayerCreation : MonoBehaviour
 	int[] mouthAreas = {6,7,8,9};
 	int[] torsoAreas = {11,12,13,16,17};
 	int[] limbAreas = {0,10,14,15,18,24,25};
-	
+
 	PlayerCreation playerCreationScript;
 	PlayerEntity playerStats;
 	StoryWindow storyWindowScript;
@@ -251,10 +251,10 @@ public class PlayerCreation : MonoBehaviour
 				break;
 
 			case 3: // Lupine
-				setMaterialTexture(faceAreas, "AnubisHeadBlack");
-				setMaterialTexture(torsoAreas, "AnubisBodyBlack");
-				setMaterialTexture(limbAreas, "AnubisBodyBlack");
-				setMaterialTexture(mouthAreas, "AnubisMouth");
+				setMaterialTexture(faceAreas, "1_CWAnubisFace_T");
+				setMaterialTexture(torsoAreas, "2_CWAnubisTorso_T");
+				setMaterialTexture(limbAreas, "3_CWAnubisLimbs_T");
+				setMaterialTexture(mouthAreas, "4_CWLionMouth_T");
 				setMaterialTexture(eyeAreas, "AnubisEyesGreen");
 
 				setBlendShapes("Raw_Mino_Genesis", 0.0f);
